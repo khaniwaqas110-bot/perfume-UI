@@ -1,0 +1,858 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(35, 35, 35);
+    /* height: 100vh; */
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 200px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-video {
+    /* position: fixed; */
+    object-fit: cover;
+    z-index: -1;
+    height: 750px;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(20px);
+    position: absolute;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    /* background: rgb(33, 32, 32); */
+    border-radius: 50px;
+    width: 82%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    /* background-color: rgb(232, 232, 232); */
+    top: 0;
+    background: rgba(40, 39, 39, 0.75);
+    z-index: 99;
+}
+
+#navbar h1 {
+    color: white;
+    margin-left: 20px;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+    color: white;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    transition: all 500ms;
+    background-color: rgb(53, 253, 249) transparent;
+    text-align: center;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    display: flex;
+    border-radius: 27px;
+    /* opacity: 0; */
+}
+
+.links a:hover {
+    cursor: pointer;
+    /* text-decoration: 2px underline rgb(211, 196, 196); */
+    color: black;
+    transform: scale(1);
+    background-color: rgb(53, 253, 249);
+    opacity: 1;
+}
+
+.icon {
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-magnifying-glass {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    /* transition: all 500ms; */
+}
+
+.fa-magnifying-glass:hover {
+    color: rgb(53, 253, 249);
+    cursor: pointer;
+    /* transform: scale(1.1); */
+}
+
+.fa-lock {
+    color: whdite;
+    font-size: 20px;
+    color: rgb(255, 249, 249);
+    margin-left: 17px;
+    /* transition: all 500ms; */
+}
+
+.fa-lock:hover {
+    color: rgb(53, 253, 249);
+    cursor: pointer;
+    /* transform: scale(1.1); */
+}
+
+.Login {
+    display: flex;
+    width: 110px;
+    height: 32px;
+    text-align: center;
+    color: rgb(53, 253, 249);
+    border: 1px solid gray;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: all 600ms;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Login:hover {
+    cursor: pointer;
+    background-color: rgb(53, 253, 249);
+    /* transform: scale(1.11); */
+    color: black;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    padding-left: 100px;
+    margin-bottom: 400px;
+}
+
+#hero h2,
+#hero h3,
+#hero p {
+    margin: 20px;
+}
+
+#hero h2 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: left 1s ease;
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#hero h3 {
+    font-size: 80px;
+    color: white;
+    animation: up 1s ease;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero p {
+    color: white;
+    max-width: 500px;
+    animation: scale 2s ease;
+}
+
+@keyframes scale {
+    from {
+        opacity: 0;
+        transform: scale(40px);
+    }
+
+    t0 {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 23px;
+    /* margin-left: 30px; */
+}
+
+.btn1 {
+    background-color: rgb(43, 42, 42);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 9px;
+    border-radius: 7px;
+    border: 0.5px solid rgb(113, 122, 14);
+    margin-left: 20px;
+    transition: all 500ms;
+}
+
+.btn1:hover {
+    background-color: rgb(18, 15, 15);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn2 {
+    background-color: rgb(43, 154, 228);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px;
+    border-radius: 7px;
+    border: 1px solid rgb(43, 154, 228);
+    width: 120px;
+    text-align: center;
+    margin-left: 25px;
+    transition: all 500ms;
+}
+
+.btn2:hover {
+    background-color: rgb(25, 114, 173);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#hero img {
+    margin-right: 50px;
+    margin-top: 50px;
+    height: 600px;
+    width: 550px;
+    animation-name: move;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+    margin-top: 150px;
+    background-color: rgb(46, 45, 45);
+    margin-bottom: 200px;
+}
+
+#about h4,
+#about h5,
+#about p {
+    margin: px;
+}
+
+#about video {
+    width: 400px;
+    /* height: 560px; */
+    border: 1px solid gray;
+    margin-left: 150px;
+    border-radius: 30px;
+}
+
+#about h4 {
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+#about h5 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#about p {
+    color: rgb(220, 210, 210);
+    width: 500px;
+    margin-right: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#collection-tittle {
+    /* display: flex; */
+    align-items: center;
+    margin-top: 250px;
+    margin-left: 230px;
+}
+
+#collection-tittle h6 {
+    color: white;
+    font-size: 40px;
+}
+
+#collection-tittle p {
+    color: rgb(220, 210, 210);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    ;
+    margin-top: 15px;
+}
+
+.collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    border-radius: 20px;
+    width: 300px;
+    height: 440px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 40px;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgba(53, 253, 249, 0.15);
+    background: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(13px);
+    transition: all 700ms;
+}
+
+.card:hover {
+    border-left: 2px solid rgb(83, 81, 81);
+    border-right: 2px solid rgb(83, 81, 81);
+    border-bottom: 2px solid rgb(83, 81, 81);
+    cursor: pointer;
+}
+
+.card img {
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 40px; */
+    align-self: center;
+    object-fit: contain;
+    margin-top: 50px;
+    transition: 1s;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgb(87, 85, 85);
+}
+
+.card:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card h6 {
+    color: white;
+    /* text-align: center; */
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    /* align-self: center; */
+    margin-top: 50px;
+}
+
+.card p {
+    color: rgb(53, 253, 249);
+    ;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.buttons {
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 30px;
+    height: 100px;
+}
+
+.buttons span {
+    color: white;
+}
+
+.buttons button {
+    background-color: rgb(43, 154, 228);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid rgb(43, 154, 228);
+    padding: 6px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 500ms;
+}
+
+button:hover {
+    background-color: rgb(25, 114, 173);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#shop-tittle-1 {
+    /* color:  rgb(53, 253, 249);; */
+    justify-content: center;
+    margin-top: 200px;
+    align-items: center;
+    display: flex;
+    text-justify: auto;
+
+
+
+}
+
+#shop-tittle-1 h6 {
+    color: white;
+    font-size: 14px;
+    margin-top: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#shop-tittle-2 {
+    justify-content: center;
+    margin-top: 200px;
+    align-items: center;
+    display: flex;
+    text-justify: auto;
+    margin-bottom: 300px;
+}
+
+#shop-tittle-2 h6 {
+    font-size: 40px;
+    color: white;
+}
+
+#shop-tittle-1,
+#shop-tittle-2 {
+    margin: 11px;
+}
+
+#line {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 3px;
+    background-color: white;
+    align-items: center;
+    margin: auto;
+}
+
+.shop-collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.shop-card {
+    align-items: center;
+    height: 380px;
+    width: 250px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 25px rgba(53, 253, 249, 0.15);
+    background: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(13px);
+    transition: all 800ms;
+}
+
+.shop-card:hover {
+    border: 1px solid rgb(96, 94, 94);
+    cursor: pointer;
+    transform: translateY(-18px);
+}
+
+.stars,
+.shop-card h6 {
+    margin: 0;
+}
+
+.shop-card img {
+    width: 150px;
+    height: auto;
+    margin-top: 70px;
+}
+
+.stars {
+    color: goldenrod;
+    font-size: 10px;
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.shop-card h6 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.shop-price {
+    justify-content: center;
+    color: goldenrod;
+    margin-top: 8px;
+}
+
+.cart-btn {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 86%;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 9px;
+    color: black;
+    background: rgb(63, 59, 59);
+    border: 1px solid gray;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.shop-card:hover .cart-btn {
+    opacity: 1;
+    transform: translateY(0);
+    background: rgb(35, 35, 35);
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.left h1 {
+    margin-top: 130px;
+    color: rgb(53, 253, 249);
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.left h2 {
+    color: white;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.left p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 450px;
+    margin-top: 30px;
+}
+
+.wtsp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.wtsp:hover {
+    cursor: pointer;
+}
+
+.left h3 {
+    color: white;
+    margin-top: 20px;
+    /* margin-left: 30px; */
+}
+
+.fa-whatsapp {
+    color: rgb(99, 176, 51);
+    font-size: 30px;
+}
+
+.gmail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gmail:hover {
+    cursor: pointer;
+}
+
+.left h4 {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fa-envelope {
+    font-size: 30px;
+    color: #0e6da1;
+    ;
+}
+
+.right {
+    display: flex;
+    /* align-items: center; */
+    border: 1px solid gray;
+    width: 500px;
+    height: 600px;
+    margin-top: 300px;
+    border-radius: 30px;
+    background: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(13px);
+    flex-direction: column;
+    align-items: center;
+}
+
+.right h5 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.right p {
+    color: rgb(228, 226, 226);
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5px;
+    font-size: 19px;
+}
+
+input {
+    font-size: 13px;
+    display: flex;
+    width: 440px;
+    height: 33px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 13, 13);
+    border-radius: 7px;
+    border: 1px solid gray;
+    /* margin-top: 0; */
+    /* margin-bottom: 10px; */
+    padding-left: 10px;
+    color: white;
+    /* gap: 10px; */
+
+}
+
+::placeholder {
+    color: rgb(179, 169, 169);
+}
+
+textarea {
+    border-radius: 10px;
+    background-color: rgb(14, 13, 13);
+    height: 100px;
+    width: 440px;
+    font-size: 13px;
+    padding-left: 10px;
+    color: white;
+}
+
+.sub-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-btn button {
+    width: 440px;
+    height: 33px;
+    border-radius: 7px;
+    margin-top: 25px;
+    color: white;
+    transition: all 800ms;
+    background-color: rgb(28, 98, 145);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sub-btn button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(28, 98, 145);
+    color: white;
+}
+
+#foter-tittle {
+    justify-content: center;
+    margin-top: 150px;
+    text-align: center;
+}
+
+#foter-tittle span,
+#foter-tittle h1,
+#foter-tittle p,
+.futer-btn {
+    margin: 20px;
+}
+
+#foter-tittle span {
+    color: rgb(53, 253, 249);
+    ;
+    font-family: sans-serif;
+    font-size: 44px;
+}
+
+#foter-tittle h1 {
+    color: white;
+    font-size: 42px;
+
+}
+
+#foter-tittle p {
+    color: rgb(220, 210, 210);
+    font-size: 26px;
+    max-width: 600px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* justify-content: center; */
+    margin: auto;
+}
+
+.futer-btn {
+    display: flex;
+    width: 235px;
+    height: 60px;
+    text-align: center;
+    color: rgb(53, 253, 249);
+    border: 1px solid gray;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+    margin-left: 10px;
+    transition: all 600ms;
+    font-size: 26px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.futer-btn:hover {
+    cursor: pointer;
+    background-color: rgb(53, 253, 249);
+    /* transform: scale(1.11); */
+    color: black;
+}
+
+.futer-write {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 100px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.futer-card {
+    /* display: flex; */
+    justify-content: space-between;
+    /* color: white; */
+    gap: 70px;
+}
+
+.futer-card h1 {
+    color: white;
+}
+
+.futer-card p {
+    font-size: 20px;
+    max-width: 300px;
+    margin-top: 60px;
+    color: rgb(169, 164, 164);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.futer-card h2 {
+    color: white;
+    font-size: 23px;
+}
+
+.futer-card h3 {
+    color: rgb(169, 164, 164);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 23px;
+    font-size: 15px;
+    transition: all 500ms;
+}
+
+.futer-card h3:hover {
+    cursor: pointer;
+    color: rgb(53, 253, 249);
+    transform: scale(1);
+}
+
+.futer-card h4 {
+    color: rgb(169, 164, 164);
+    margin-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 300px;
+    font-size: 18px;
+}
